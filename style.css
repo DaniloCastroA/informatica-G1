@@ -1,0 +1,9 @@
+.tela {
+  display: none;
+  padding: 20px;
+  text-align: center;
+}
+
+.ativa {
+  display: block;
+}

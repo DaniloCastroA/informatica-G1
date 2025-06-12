@@ -10,3 +10,11 @@ function mostrarTela() {
     menu.classList.add('ativa');
   }
 }
+function fecharPopup(id) {
+  const popup = document.getElementById(id);
+  if (popup) popup.style.display = 'none';
+}
+function mostrarPopup(id) {
+  const popup = document.getElementById(id);
+  if (popup) popup.style.display = 'flex';
+}

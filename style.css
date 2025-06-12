@@ -1,9 +1,54 @@
-.tela {
-  display: none;
-  padding: 20px;
-  text-align: center;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
+.tela {
+  display: none;
+  text-align: center;
+  height: 100vh; 
+  width: 100vw;  
+  position: relative;
+}
 .ativa {
   display: block;
+}
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.game{
+    background-color: aqua;
+}
+.popup-conteudo {
+  background: white;
+  padding: 20px;
+  width: 50%;
+  max-width: 500px;
+  border-radius: 10px;
+  text-align: center;
+}
+.tela h2,
+.tela button {
+  margin: 0;
+  padding: 0;
+}
+.popup-conteudo {
+  background: white;
+  padding: 20px;
+  width: 50%;
+  max-width: 500px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }

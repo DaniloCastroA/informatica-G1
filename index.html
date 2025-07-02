@@ -7,35 +7,46 @@
   <title>repl.it</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
-  
-<div id="menu" class="tela ativa">
-  <h2>Menu do Jogo</h2>
-  <button onclick="mostrarTela()">Ir para o Jogo</button>
-</div>
 
-<div id="jogo" class="tela game">
-  <h2>Tela do Jogo</h2>
-  <button onclick="mostrarTela()">Voltar ao Menu</button>
-  <button onclick="mostrarPopup('popup-perdeu')">perdeu</button>
-  <button onclick="mostrarPopup('popup-ganhou')">ganhou</button>
-</div>
-
-<div id="popup-perdeu" class="popup">
-  <div class="popup-conteudo">
-    <h3>game over</h3>
-    <button onclick="fecharPopup('popup-perdeu')">Fechar</button>
+  <div id="menu" class="tela ativa">
+    <h2>Menu do Jogo</h2>
+    <button onclick="mostrarTela()">Ir para o Jogo</button>
   </div>
-</div>
 
-<div id="popup-ganhou" class="popup">
-  <div class="popup-conteudo">
-    <h3>wins!!</h3>
-    <button onclick="fecharPopup('popup-ganhou')">Fechar</button>
+  <div id="jogo" class="tela game">
+    <div id="contador-carbono">
+      <div class="letra">
+        <span>CARBONO: <span id="contador">200</span></span>
+      </div>
+      </div>
+    <h2>Tela do Jogo</h2>
+
+    <div id="nuvens-container">
+      <img id="planeta" src="imagens/planeta.png" alt="Planeta" />
+    </div>
+    <button onclick="mostrarTela()">Voltar ao Menu</button>
+    <button onclick="mostrarPopup('popup-perdeu')">perdeu</button>
+    <button onclick="mostrarPopup('popup-ganhou')">ganhou</button>
+
   </div>
-</div>
 
-<script src="script.js"></script>
+  <div id="popup-perdeu" class="popup">
+    <div class="popup-conteudo">
+      <h3>game over</h3>
+      <button onclick="fecharPopup('popup-perdeu')">Fechar</button>
+    </div>
+  </div>
+
+  <div id="popup-ganhou" class="popup">
+    <div class="popup-conteudo">
+      <h3>wins!!</h3>
+      <button onclick="fecharPopup('popup-ganhou')">Fechar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>

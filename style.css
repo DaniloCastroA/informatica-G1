@@ -27,7 +27,72 @@ html, body {
   z-index: 10;
 }
 .game{
-    background-color: aqua;
+    background: url('imagens/espaco.jpg') no-repeat center center;
+    background-size: cover;
+}
+#jogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+#nuvens-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 420px;
+  height: 420px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.nuvem {
+  position: absolute;
+  width: 80px;
+  pointer-events: auto;
+  cursor: pointer;
+  z-index: 2;
+  transition: opacity 0.7s;
+}
+#planeta {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 300px; 
+  height: 300px; 
+  max-width: none;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  margin: 0;
+  pointer-events: auto;
+}
+.letra{
+  margin-bottom: 13px;
+  margin-left: -10px;
+}
+#contador-carbono {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 220px;
+  height: 120px;
+  background: url('imagens/contagem.png') no-repeat center center;
+  background-size: contain; /* ou cover, teste os dois */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  font-size: 1.5em;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: center;
+  box-sizing: border-box;
+  text-shadow: 1px 1px 3px #000;
+}
+
+#contador-carbono span {
+  text-align: center;
 }
 .popup-conteudo {
   background: white;

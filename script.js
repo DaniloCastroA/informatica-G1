@@ -117,6 +117,8 @@ function atualizaCount() {
 
 function fecharPopup(id) {
   const popup = document.getElementById(id);
+  audioGame.currentTime = 0;
+  audioGame.play();
   if (popup) popup.style.display = 'none';
   if (!intervalId) {
     intervalId = setInterval(atualizaCount, 1000);

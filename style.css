@@ -29,6 +29,9 @@ html, body {
   
 }
 .ativa {
+  background: url('imagens/tela_inicial.png') no-repeat center center;
+  background-size: cover;
+  max-width: 100%;
   display: block;
 }
 .popup {
@@ -71,27 +74,24 @@ html, body {
   z-index: 2;
   transition: opacity 0.7s;
 }
-#planeta {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 300px; 
-  height: 300px; 
-  max-width: none;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-  margin: 0;
-  pointer-events: auto;
+#btn-voltar {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  top: 42px;
 }
+
 .letra{
-  margin-bottom: 13px;
-  margin-left: -10px;
+  margin-bottom: 22px;
+  margin-left: -15px;
 }
 #contador-carbono {
   position: absolute;
   top: 16px;
   left: 16px;
-  width: 220px;
+  width: 400px;
   height: 120px;
   background: url('imagens/contagem.png') no-repeat center center;
   background-size: contain;

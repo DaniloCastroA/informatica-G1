@@ -11,18 +11,36 @@
 <body>
 
   <div id="menu" class="tela ativa">
+    <audio id="meuAudio" autoplay loop hidden>
+      <source src="audios/bgm tela inicial.m4a" type="audio/mp4">
+    </audio>
     <h2>Menu do Jogo</h2>
     <button onclick="mostrarTela()">Ir para o Jogo</button>
   </div>
 
   <div id="jogo" class="tela game">
+    <audio id="meuAudioGame" loop hidden>
+      <source src="audios/bgm tela do jogo.m4a" type="audio/mp4">
+    </audio>
     <div id="contador-carbono">
       <div class="letra">
-        <span>CARBONO: <span id="contador">200</span></span>
+        <span style="font-family: 'MinhaFonte';">CARBONO: <span id="contador">200</span></span>
       </div>
     </div>
 
     <div id="nuvens-container">
+      <audio id="audioNuvem1">
+        <source src="audios/POOF v1.mp3" type="audio/mp4">
+      </audio>
+      <audio id="audioNuvem2">
+        <source src="audios/POOF v2.mp3" type="audio/mp4">
+      </audio>
+      <audio id="audioNuvem3">
+        <source src="audios/POOF v3.mp3" type="audio/mp4">
+      </audio>
+      <audio id="audioNuvem4">
+        <source src="audios/POOF v4.mp3" type="audio/mp4">
+      </audio>
     </div>
     <button id="btn-voltar" onclick="mostrarTela()">Voltar ao Menu</button>
 
@@ -30,6 +48,9 @@
 
   <div id="popup-perdeu" class="popup">
     <div class="popup-conteudo">
+      <audio id="audioPerdeu">
+        <source src="audios/jingle de fracasso v2.mp3" type="audio/mp4">
+      </audio>
       <h3>game over</h3>
       <button onclick="fecharPopup('popup-perdeu')">Fechar</button>
     </div>
@@ -37,6 +58,9 @@
 
   <div id="popup-ganhou" class="popup">
     <div class="popup-conteudo">
+      <audio id="audioVitoria">
+        <source src="audios/jingle de vitoria.m4a" type="audio/mp4">
+      </audio>
       <h3>wins!!</h3>
       <button onclick="fecharPopup('popup-ganhou')">Fechar</button>
     </div>

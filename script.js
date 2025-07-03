@@ -4,6 +4,15 @@ var count = 200;
 let intervalId = null;
 let nuvens = null;
 const container = document.getElementById('nuvens-container');
+const audioMenu = document.getElementById('meuAudio');
+const audioGame = document.getElementById('meuAudioGame');
+const audioPerdeu = document.getElementById('audioPerdeu');
+const audioVitoria = document.getElementById('audioVitoria');
+
+audioMenu.volume = 0.3;
+audioGame.volume = 0.3;
+audioPerdeu.volume = 0.3;
+audioVitoria.volume = 0.3;
 
 
 function mostrarTela() {
@@ -12,7 +21,13 @@ function mostrarTela() {
     nuvens = setInterval(criarNuvemAleatoria, 500);
     menu.classList.remove('ativa');
     telaJogo.classList.add('ativa');
+    audioMenu.pause();
+    audioGame.currentTime = 0;
+    audioGame.play();
   } else {
+    audioGame.pause();
+    audioMenu.currentTime = 0;
+    audioMenu.play();
     telaJogo.classList.remove('ativa');
     menu.classList.add('ativa');
     clearInterval(intervalId);
@@ -54,6 +69,13 @@ function criarNuvemAleatoria() {
 
 function clickNuvem(nuvemElem) {
   nuvemElem.onclick = null;
+
+  const audioIndex = Math.floor(Math.random() * 4) + 1;
+  const audio = document.getElementById('audioNuvem' + audioIndex);
+  if (audio) {
+    audio.currentTime = 0;
+    audio.play();
+  }
   const nuvemIndex = Math.floor(Math.random() * 3) + 1;
   nuvemElem.style.zIndex = 1;
   nuvemElem.src = `imagens/nuvemclicada${nuvemIndex}.png`;
@@ -62,7 +84,7 @@ function clickNuvem(nuvemElem) {
     nuvemElem.style.opacity = '0';
   }, 150);
 
-  count = count - (Math.floor(Math.random() * (40 - 20 + 1)) + 20);
+  count = count - (Math.floor(Math.random() * (100 - 20 + 1)) + 20);
   if (count <= 0) {
     count = 0;
 
@@ -103,6 +125,14 @@ function fecharPopup(id) {
 }
 function mostrarPopup(id) {
   const popup = document.getElementById(id);
+  audioMenu.pause();
+  audioGame.pause();
+  if (id === 'popup-perdeu') {
+    audioPerdeu.play();
+  }
+  else {
+    audioVitoria.play();
+  }
   if (popup) popup.style.display = 'flex';
   count = 200;
   if (container) {
@@ -114,6 +144,9 @@ function mostrarPopup(id) {
   nuvens = null;
 }
 atualizarDisplayCount();
-document.addEventListener('mousemove', function(event) {
+
+//ajuda a posicionar objetos
+document.addEventListener('mousemove', function (event) {
   console.log('x:', event.clientX, 'y:', event.clientY);
 });
+

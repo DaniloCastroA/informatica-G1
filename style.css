@@ -5,12 +5,18 @@ html, body {
   overflow: hidden;
 }
 
+@font-face {
+  font-family: 'MinhaFonte';
+  src: url('fonte/AGoblinAppears-o2aV.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 #btn-voltar {
   position: absolute;
   top: 56px;
   right: 27px;
   padding: 5px;
-  z-index: 101;
 
 }
 

@@ -14,8 +14,17 @@
     <audio id="meuAudio" autoplay loop hidden>
       <source src="audios/bgm tela inicial.m4a" type="audio/mp4">
     </audio>
-    <button onclick="mostrarTela()">Ir para o Jogo</button>
+    <div id="botoes-menu">
+      <button onclick="mostrarTela()">
+        <img src="imagens/botao-jogar-1.png">
+      </button>
+      <button id="btn-regras" onclick="mostrarPopupSimples('popup-regras')">
+        <img src="imagens/botao-regras-1.png" alt="Regras">
+      </button>
+    </div>
   </div>
+
+
 
   <div id="jogo" class="tela game">
     <audio id="meuAudioGame" loop hidden>
@@ -44,26 +53,45 @@
     <button id="btn-voltar" onclick="mostrarTela()">
       <img src="imagens/botaoVoltar.png" alt="Voltar ao Menu" style="height:60px;">
     </button>
-
   </div>
 
-  <div id="popup-perdeu" class="popup">
-    <div class="popup-conteudo">
-      <audio id="audioPerdeu">
-        <source src="audios/jingle de fracasso v2.mp3" type="audio/mp4">
-      </audio>
-      <h3>game over</h3>
-      <button onclick="fecharPopup('popup-perdeu')">Fechar</button>
+
+  <div id="popup-regras" class="pp-regras">
+    <button id="btn-fechar-regras" onclick="fecharPopupSimples('popup-regras')">X</button>
+  </div>
+
+
+  <div id="popup-perdeu" class="popup-perdeu">
+    <audio id="audioPerdeu">
+      <source src="audios/jingle de fracasso v2.mp3" type="audio/mp4">
+    </audio>
+    <div class="botoes-popup-perdeu">
+      <button onclick="fecharPopup('popup-perdeu')">
+        <img src="imagens/tentar-dnv.png" />
+        <button onclick="mostrarPopupSimples('popup-regras')">
+          <img src="imagens/botao_ver_regras_1.png" />
+        </button>
+        <button onclick="fecharPopupEVoltar('popup-perdeu')">
+          <img src="imagens/voltar-ao-menu.png" />
+        </button>
+      </button>
     </div>
   </div>
 
-  <div id="popup-ganhou" class="popup">
-    <div class="popup-conteudo">
-      <audio id="audioVitoria">
-        <source src="audios/jingle de vitoria.m4a" type="audio/mp4">
-      </audio>
-      <h3>wins!!</h3>
-      <button onclick="fecharPopup('popup-ganhou')">Fechar</button>
+  <div id="popup-ganhou" class="popup-ganhou">
+    <audio id="audioVitoria">
+      <source src="audios/jingle de vitoria.m4a" type="audio/mp4">
+    </audio>
+    <div class="botoes-popup-perdeu">
+      <button onclick="fecharPopup('popup-ganhou')">
+        <img src="imagens/tentar-dnv.png" />
+        <button onclick="mostrarPopupSimples('popup-regras')">
+          <img src="imagens/botao_ver_regras_1.png" />
+        </button>
+        <button onclick="fecharPopupEVoltar('popup-ganhou')">
+          <img src="imagens/voltar-ao-menu.png" />
+        </button>
+      </button>
     </div>
   </div>
 

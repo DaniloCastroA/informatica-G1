@@ -80,14 +80,37 @@ function clickNuvem(nuvemElem) {
   nuvemElem.style.zIndex = 1;
   nuvemElem.src = `imagens/nuvemclicada${nuvemIndex}.png`;
 
+
+  const valorRetirado = Math.floor(Math.random() * (100 - 20 + 1)) + 20;
+  count = count - valorRetirado;
+
+
+  const span = document.createElement('span');
+  span.textContent = `-${valorRetirado}`;
+  span.className = 'nuvem-dano';
+
+  const container = document.getElementById('nuvens-container');
+  container.appendChild(span);
+
+
+  span.style.left = (nuvemElem.offsetLeft + nuvemElem.offsetWidth - 20) + 'px';
+  span.style.top = (nuvemElem.offsetTop + 10) + 'px';
+
+
+  setTimeout(() => {
+    span.classList.add('hide');
+  }, 50);
+
+  setTimeout(() => {
+    if (span.parentNode) span.parentNode.removeChild(span);
+  }, 800);
+
   setTimeout(() => {
     nuvemElem.style.opacity = '0';
   }, 150);
 
-  count = count - (Math.floor(Math.random() * (100 - 20 + 1)) + 20);
   if (count <= 0) {
     count = 0;
-
     mostrarPopup('popup-ganhou');
     atualizarDisplayCount();
     return;
@@ -115,6 +138,14 @@ function atualizaCount() {
   atualizarDisplayCount();
 }
 
+function mostrarPopupSimples(id) {
+  document.getElementById(id).style.display = 'flex';
+}
+
+function fecharPopupSimples(id) {
+  document.getElementById(id).style.display = 'none';
+}
+
 function fecharPopup(id) {
   const popup = document.getElementById(id);
   audioGame.currentTime = 0;
@@ -129,7 +160,7 @@ function mostrarPopup(id) {
   const popup = document.getElementById(id);
   audioMenu.pause();
   audioGame.pause();
-  if (id === 'popup-perdeu') {
+  if (id === 'popup-perdeu-id') {
     audioPerdeu.play();
   }
   else {
@@ -146,6 +177,11 @@ function mostrarPopup(id) {
   nuvens = null;
 }
 atualizarDisplayCount();
+
+function fecharPopupEVoltar(id) {
+  fecharPopup(id);
+  mostrarTela();
+}
 
 //ajuda a posicionar objetos
 document.addEventListener('mousemove', function (event) {

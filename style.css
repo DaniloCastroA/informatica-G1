@@ -26,17 +26,25 @@ button {
   padding: 0;
   cursor: pointer;
 }
+#menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
 #botoes-menu {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* faz os botões ficarem alinhados à esquerda dentro da div */
+  align-items: center;
   gap: 16px;
-  position: relative;
-  left: 1300px;   /* negativo move para a esquerda, positivo para a direita */
-  top: 70px;     /* aumenta para descer mais */
+  position: static;
+  margin-top: -460px;   /* diminua para subir, use negativo para subir mais */
+  margin-left: 1100px;  /* aumente para mover para a direita */
 }
 #botoes-menu img {
-  height: 160px; /* ou o tamanho desejado */
+  height: 12vw;      /* ou use max-height: 160px; para limitar */
+  max-height: 160px;
   width: auto;
 }
 .tela {

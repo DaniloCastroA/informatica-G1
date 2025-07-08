@@ -15,6 +15,7 @@ audioPerdeu.volume = 0.3;
 audioVitoria.volume = 0.3;
 
 
+
 function mostrarTela() {
   if (menu.classList.contains('ativa')) {
     intervalId = setInterval(atualizaCount, 1000);

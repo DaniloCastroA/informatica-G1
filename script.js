@@ -81,7 +81,7 @@ function clickNuvem(nuvemElem) {
   nuvemElem.src = `imagens/nuvemclicada${nuvemIndex}.png`;
 
 
-  const valorRetirado = Math.floor(Math.random() * (100 - 20 + 1)) + 20;
+  const valorRetirado = Math.floor(Math.random() * (40 - 20 + 1)) + 20;
   count = count - valorRetirado;
 
 

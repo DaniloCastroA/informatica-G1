@@ -27,23 +27,24 @@ button {
   cursor: pointer;
 }
 #menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 #botoes-menu {
+  position: absolute;
+  top: 7.5%;      
+  right: 10%;     
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  position: static;
-  margin-top: -460px;   /* diminua para subir, use negativo para subir mais */
-  margin-left: 1100px;  /* aumente para mover para a direita */
 }
 #botoes-menu img {
-  height: 12vw;      /* ou use max-height: 160px; para limitar */
+  height: 12vw;      
   max-height: 160px;
   width: auto;
 }

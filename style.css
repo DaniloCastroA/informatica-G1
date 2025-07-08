@@ -26,26 +26,17 @@ button {
   padding: 0;
   cursor: pointer;
 }
-#menu {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 #botoes-menu {
-  position: absolute;
-  top: 7.5%;      
-  right: 10%;     
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start; /* faz os botões ficarem alinhados à esquerda dentro da div */
   gap: 16px;
+  position: relative;
+  left: 1300px;   /* negativo move para a esquerda, positivo para a direita */
+  top: 70px;     /* aumenta para descer mais */
 }
 #botoes-menu img {
-  height: 12vw;      
-  max-height: 160px;
+  height: 160px; /* ou o tamanho desejado */
   width: auto;
 }
 .tela {

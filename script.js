@@ -161,7 +161,7 @@ function mostrarPopup(id) {
   const popup = document.getElementById(id);
   audioMenu.pause();
   audioGame.pause();
-  if (id === 'popup-perdeu-id') {
+  if (id === 'popup-perdeu') {
     audioPerdeu.play();
   }
   else {

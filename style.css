@@ -17,7 +17,11 @@ html, body {
   top: 56px;
   right: 27px;
   padding: 5px;
-
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  top: 42px; 
 }
 
 button {
@@ -26,17 +30,18 @@ button {
   padding: 0;
   cursor: pointer;
 }
+
 #botoes-menu {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* faz os botões ficarem alinhados à esquerda dentro da div */
+  align-items: flex-start; 
   gap: 16px;
   position: relative;
-  left: 1300px;   /* negativo move para a esquerda, positivo para a direita */
-  top: 70px;     /* aumenta para descer mais */
+  left: 1300px;   
+  top: 70px;     
 }
 #botoes-menu img {
-  height: 160px; /* ou o tamanho desejado */
+  height: 160px; 
   width: auto;
 }
 .tela {
@@ -93,19 +98,6 @@ button {
   align-items: center;
   z-index: 100;
 }
-.botoes-popup-perdeu {
-  position: absolute;
-  bottom: 190px; /* ajuste conforme necessário */
-  left: 47%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 70px; /* espaço entre os botões */
-  z-index: 101;
-}
-.botoes-popup-perdeu img {
-  height: 120px; /* ajuste o tamanho dos botões */
-  width: auto;
-}
 
 .popup-ganhou{
   display: none; 
@@ -120,19 +112,35 @@ button {
   align-items: center;
   z-index: 100;
 }
-.botoes-popup-ganhou {
+
+.botoes-popup-perdeu {
   position: absolute;
-  bottom: 190px; /* ajuste conforme necessário */
+  bottom: 190px; 
   left: 47%;
   transform: translateX(-50%);
   display: flex;
-  gap: 70px; /* espaço entre os botões */
+  gap: 70px; 
   z-index: 101;
 }
-.botoes-popup-ganhou img {
-  height: 120px; /* ajuste o tamanho dos botões */
+.botoes-popup-perdeu img {
+  height: 120px; 
   width: auto;
 }
+.botoes-popup-ganhou img {
+  height: 120px; 
+  width: auto;
+}
+
+.botoes-popup-ganhou {
+  position: absolute;
+  bottom: 190px; 
+  left: 47%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 70px; 
+  z-index: 101;
+}
+
 
 #btn-fechar-regras {
   position: absolute;
@@ -178,14 +186,7 @@ button {
   z-index: 2;
   transition: opacity 0.7s;
 }
-#btn-voltar {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  outline: none;
-  top: 42px;
-}
+
 
 .letra{
   margin-bottom: 22px;
@@ -220,17 +221,8 @@ button {
   margin: 0;
   padding: 0;
 }
-.popup-conteudo {
-  background: white;
-  padding: 20px;
-  width: 50%;
-  max-width: 500px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-}
 #popup-regras {
-  justify-content: flex-start !important; /* alinha à esquerda */
+  justify-content: flex-start; 
   align-items: center;
 }
 .nuvem-dano {

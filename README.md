@@ -19,7 +19,7 @@ O jogo tem como foco introduzir conceitos básicos de **educação ambiental** d
 
 ---
 
-## 🚀 Como Jogar
+## Como Jogar
 
 1. Acesse: https://danilocastroa.github.io/informatica-G1/
 
